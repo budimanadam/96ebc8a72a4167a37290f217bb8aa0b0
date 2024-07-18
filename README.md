@@ -27,3 +27,22 @@ email-queue-worker version 3.1.0.
 
 - Run `php -S localhost:8000` for the API
 - Run `php receive-worker.php` for the worker
+
+## Generate Token
+
+```
+curl --location --request POST 'http://localhost:8000/generate-token.php' \
+--header 'Content-Type: application/json'
+```
+## Send Email to Queue
+
+```
+curl --location 'http://localhost:8000/send-email-queue.php' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: {auth}' \
+--data-raw '{
+    "recipient": "test@yahoo.co.id",
+    "subject": "Subject Email",
+    "body": "Body Email."
+}'
+```
