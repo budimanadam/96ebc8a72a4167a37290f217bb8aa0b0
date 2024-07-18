@@ -6,7 +6,6 @@ email-queue-worker version 3.1.0.
 
 - Using PHP
 
-
 ## Server Requirements
 
 - PHP 7.1.x
@@ -34,6 +33,7 @@ email-queue-worker version 3.1.0.
 curl --location --request POST 'http://localhost:8000/generate-token.php' \
 --header 'Content-Type: application/json'
 ```
+
 ## Send Email to Queue
 
 ```
